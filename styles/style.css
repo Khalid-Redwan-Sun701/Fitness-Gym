@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.cdnfonts.com/css/miama');
 
+html,
 body {
+  height: 100%;
   background-color: black;
   color: white;
   margin: 0;
@@ -185,7 +187,8 @@ main {
 
 .habit-title-subtext,
 .meet-title-subtext,
-.bmi-title-subtext {
+.bmi-title-subtext,
+.find-title-subtext {
   text-align: center;
   margin-top: 50px;
 }
@@ -193,7 +196,8 @@ main {
 .habit-change-title,
 .extra-mile-title,
 .meet-title,
-.bmi-title {
+.bmi-title,
+.find-title {
   font-size: 2.5rem;
   font-weight: 900;
 }
@@ -201,7 +205,8 @@ main {
 .habit-change-subtext,
 .meet-subtext,
 .bmi-subtext,
-.calculate-bmi-subtext {
+.calculate-bmi-subtext,
+.find-subtext {
   font-weight: 400;
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.5);
@@ -295,6 +300,8 @@ main {
   margin: 0;
   /* padding: 0; */
   background-color: rgb(34, 34, 34);
+  width: 100%;
+  position: relative;
 }
 
 .footer-heading {
@@ -341,7 +348,7 @@ main {
 }
 
 .horizontal-line {
-  border-top: 2px solid tomato;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
   max-width: 1200px;
   margin: 30px auto;
 }
@@ -468,6 +475,31 @@ select {
   width: 100%;
 }
 
+/* Find Our gym section */
+
+.find-our-gym {
+  margin-top: 40px;
+  padding: 40px;
+  border-radius: 18px;
+  border: 1px solid white;
+}
+
+.gym-location {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.gym-location-selection {
+  width: 60%; /* Set the width to 60% */
+  margin: 40px auto;
+}
+
+.nearby-gym-button {
+  width: 40%;
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 576px) {
   .banner {
     padding: 30px;
@@ -551,6 +583,10 @@ select {
   .age-div,
   .sex-div,
   .activity-factor-div {
+    width: 100%;
+  }
+
+  .nearby-gym-button {
     width: 100%;
   }
 }
