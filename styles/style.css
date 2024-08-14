@@ -184,20 +184,24 @@ main {
 /* Habit Change Section */
 
 .habit-title-subtext,
-.meet-title-subtext {
+.meet-title-subtext,
+.bmi-title-subtext {
   text-align: center;
   margin-top: 50px;
 }
 
 .habit-change-title,
 .extra-mile-title,
-.meet-title {
+.meet-title,
+.bmi-title {
   font-size: 2.5rem;
   font-weight: 900;
 }
 
 .habit-change-subtext,
-.meet-subtext {
+.meet-subtext,
+.bmi-subtext,
+.calculate-bmi-subtext {
   font-weight: 400;
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.5);
@@ -286,7 +290,8 @@ main {
 
 /* Footer section */
 
-.footer-section {
+.footer-section,
+.bmi {
   margin: 0;
   background-color: rgb(34, 34, 34);
 }
@@ -338,6 +343,63 @@ main {
   border-top: 2px solid tomato;
   max-width: 1200px;
   margin: 30px auto;
+}
+
+.rights {
+  padding: 50px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* BMI Calculation */
+
+.bmi-contents {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.bmi-content {
+  margin: 30px auto;
+}
+
+.table-chart {
+  /* border: 2px solid tomato; */
+}
+
+.table-chart h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table.bmi-chart {
+  /* width: 60%;
+  margin: 0 auto; */
+  border-collapse: collapse;
+  background-color: rgb(34, 34, 34);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+table.bmi-chart th,
+table.bmi-chart td {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  text-align: left;
+}
+
+table.bmi-chart th {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+table.bmi-chart td {
+  font-size: 16px;
+}
+
+td {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 @media screen and (max-width: 576px) {
