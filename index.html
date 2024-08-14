@@ -176,6 +176,46 @@
                 We believe fitness should be accessible to everyone, everywhere,
                 regardless of income or access to a gym.
               </p>
+
+              <div class="all-inputs">
+                <div class="height-div">
+                  <input type="number" placeholder="Height/cm" />
+                </div>
+                <div class="weight-div">
+                  <input type="number" placeholder="Weight/kg" />
+                </div>
+
+                <div class="age-div">
+                  <input type="number" placeholder="Age" />
+                </div>
+
+                <div class="sex-div">
+                  <select name="sex" id="sex">
+                    <option value="" disabled selected>Sex</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Not to Say">Not to Say</option>
+                  </select>
+                </div>
+
+                <div class="activity-factor-div">
+                  <select
+                    name="select an activity factor"
+                    id="select an activity factor"
+                  >
+                    <option value="" disabled selected>
+                      select an activity factor
+                    </option>
+                    <option value="Male">Sedentary</option>
+                    <option value="Female">Moderately active</option>
+                    <option value="Not to Say">Very active</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="calculate-button">
+                <button class="btn-primary bg-orange">Calculate</button>
+              </div>
             </div>
           </div>
         </div>

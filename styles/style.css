@@ -293,6 +293,7 @@ main {
 .footer-section,
 .bmi {
   margin: 0;
+  /* padding: 0; */
   background-color: rgb(34, 34, 34);
 }
 
@@ -356,11 +357,15 @@ main {
 /* BMI Calculation */
 
 .bmi-contents {
+  max-width: 1440px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
 }
 .bmi-content {
-  margin: 30px auto;
+  margin: 0px auto;
+  padding: 30px;
 }
 
 .table-chart {
@@ -402,6 +407,67 @@ td {
   color: rgba(255, 255, 255, 0.5);
 }
 
+select option {
+  background-color: tomato;
+  color: white;
+}
+
+select option:hover {
+  background-color: white;
+}
+
+.height-div {
+  grid-area: height-div;
+}
+
+.weight-div {
+  grid-area: weight-div;
+}
+
+.age-div {
+  grid-area: age-div;
+}
+
+.sex-div {
+  grid-area: sex-div;
+}
+
+.activity-factor-div {
+  grid-area: activity-factor-div;
+}
+
+.all-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'height-div weight-div'
+    'age-div sex-div'
+    'activity-factor-div activity-factor-div';
+  gap: 10px;
+}
+
+/* Input fields style */
+input,
+select {
+  margin: 5px;
+  border: transparent;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 16px;
+  color: rgba(255, 255, 255, 0.6);
+  width: 100%; /* Full width */
+  box-sizing: border-box;
+}
+
+/* Grid areas for input fields */
+.height-div,
+.weight-div,
+.age-div,
+.sex-div,
+.activity-factor-div {
+  width: 100%;
+}
+
 @media screen and (max-width: 576px) {
   .banner {
     padding: 30px;
@@ -412,7 +478,7 @@ td {
   }
 
   .nav-icon {
-    display: block; /* or display: flex; */
+    display: block;
   }
   .nav-icon-img {
     height: 40px;
@@ -433,12 +499,12 @@ td {
   }
 
   .card1 {
-    top: 400px; /* Positioning the first card at the bottom left */
+    top: 400px;
     left: 40px;
   }
 
   .card2 {
-    top: 200px; /* Positioning the second card at the top right */
+    top: 200px;
     right: 20px;
   }
 
@@ -464,5 +530,27 @@ td {
 
   .horizontal-line {
     margin: 70px;
+  }
+
+  /* BMI contents */
+
+  .bmi-contents {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .all-inputs {
+    grid-template-areas:
+      'height-div weight-div'
+      'age-div sex-div'
+      'activity-factor-div activity-factor-div';
+    gap: 10px;
+  }
+
+  .height-div,
+  .weight-div,
+  .age-div,
+  .sex-div,
+  .activity-factor-div {
+    width: 100%;
   }
 }
